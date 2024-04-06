@@ -1,4 +1,3 @@
-import 'package:efood_flutter/pages/additives_page.dart';
 import 'package:flutter/material.dart';
 
 class AdditivesCard extends StatelessWidget {

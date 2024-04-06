@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:efood_flutter/api/additives_api.dart';
 import 'package:efood_flutter/api/auth_api.dart';
 import 'package:efood_flutter/components/additives_card.dart';
 import 'package:efood_flutter/components/footer.dart';
 import 'package:efood_flutter/components/header.dart';
-import 'package:efood_flutter/api/additives_api.dart';
+import 'package:flutter/material.dart';
 
 class AdditivesPage extends StatefulWidget {
   final String barcode;
@@ -15,41 +15,26 @@ class AdditivesPage extends StatefulWidget {
 }
 
 class _AdditivesPageState extends State<AdditivesPage> {
-  String _search = '';
-  List<Map<String, dynamic>> _results = [];
-  bool _busy = false;
+  late String _search;
+  late List<Map<String, dynamic>> _results;
+  bool _busy = true;
 
   @override
   void initState() {
     super.initState();
-    _search = widget
-        .barcode; // Устанавливаем значение штрих-кода при инициализации страницы
+    _search = widget.barcode;
+    _results = [];
     _executeSearch();
   }
 
-  // Метод для выполнения поиска добавок
-  void _executeSearch() async {
-    if (_search.isEmpty) {
-      setState(() {
-        _results = [];
-      });
-      return;
-    }
-
+  Future<void> _executeSearch() async {
+    final results = await AdditivesAPI.searchAdditives(_search);
     setState(() {
-      _busy = true;
+      _results = results;
+      _busy = false;
     });
-
-    // Ваша логика для поиска добавок
-    // Например, вызов метода из API или фильтрация локального списка
-    // final results = await AdditivesAPI.searchAdditives(_search);
-    // setState(() {
-    //   _results = results;
-    //   _busy = false;
-    // });
   }
 
-  // Метод для выхода из аккаунта
   void _logout() async {
     await AuthAPI.logout();
   }
@@ -88,19 +73,12 @@ class _AdditivesPageState extends State<AdditivesPage> {
                       labelText: 'Search...',
                     ),
                   ),
-                  if (_busy)
-                    Text(
-                      'Loading...',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ListView.builder(
-                    itemCount: _results.length,
-                    itemBuilder: (context, index) {
-                      return AdditivesCard(
-                        additive: _results[index],
-                        key: ValueKey(_results[index]['code']),
-                      );
-                    },
+                  if (_busy) CircularProgressIndicator(),
+                  ListView(
+                    shrinkWrap: true,
+                    children: _results
+                        .map((result) => AdditivesCard(additive: result))
+                        .toList(),
                   ),
                 ],
               ),
