@@ -140,7 +140,6 @@ class _HomePageState extends State<HomePage> {
         });
         _executeSearch();
 
-        // После сканирования штрихкода открываем страницу с карточкой добавки
         Navigator.push(
           context,
           MaterialPageRoute(
