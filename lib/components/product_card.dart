@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   final Map<String, dynamic> product;
 
-  ProductCard({required this.product, required ValueKey key});
+  ProductCard({
+    required this.product,
+  });
 
   List<Map<String, dynamic>> get ingredients {
     return List<Map<String, dynamic>>.from(product['ingredients'].map((ing) {

@@ -1,10 +1,9 @@
+import 'package:efood_flutter/api/additives_api.dart';
 import 'package:efood_flutter/api/auth_api.dart';
 import 'package:efood_flutter/api/products_api.dart';
-import 'package:efood_flutter/components/additives_card.dart';
 import 'package:efood_flutter/components/footer.dart';
 import 'package:efood_flutter/components/header.dart';
 import 'package:efood_flutter/components/product_card.dart';
-import 'package:efood_flutter/pages/additives_page.dart';
 import 'package:efood_flutter/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -136,22 +135,21 @@ class _HomePageState extends State<HomePage> {
           '#ff6666', 'Cancel', true, ScanMode.BARCODE);
 
       if (barcode != '-1') {
-        if (barcode == 'ABC-abc-1234') {
+        Map<String, dynamic>? product =
+            AdditivesAPI.findProductByBarcode(barcode);
+
+        if (product != null) {
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => Scaffold(
                 appBar: AppBar(
-                  title: Text('Additives Card'),
+                  title: Text('Product Details'),
                 ),
                 body: Center(
-                  child: AdditivesCard(
-                    additive: {
-                      'code': barcode,
-                      'name': 'Sample Name',
-                      'purpose': 'Sample Purpose',
-                      'status': 'Approved'
-                    },
+                  child: ProductCard(
+                    product: product,
+                    key: ValueKey(""),
                   ),
                 ),
               ),
