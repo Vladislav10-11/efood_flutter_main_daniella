@@ -61,16 +61,6 @@ class AdditivesAPI {
       "name": "Крупа гречана ядриця Зерновита м/y 1кg",
     },
     {
-      "barcode": "4820197780730",
-      "code": "E235",
-      "name": "Крупа гречана ядриця Зерновита м/y 1кg",
-    },
-    {
-      "barcode": "4820038920219",
-      "code": "E236",
-      "name": "Рис довгозернистий Зерновита м/y 1кg",
-    },
-    {
       "barcode": "4820038920219",
       "code": "E236",
       "name": "Рис довгозернистий Зерновита м/y 1кg",
@@ -132,14 +122,6 @@ class AdditivesAPI {
       "name": " МОРОЗИВО ДЕСЕРТ-МОРОЗИВО РУДЬ M/Y 400Г",
     },
   ];
-
-  static Map<String, dynamic>? findProductByBarcode(String barcode) {
-    final product = _barcodes.firstWhereOrNull(
-      (product) => product['barcode'] == barcode,
-    );
-
-    return product != null ? Map<String, dynamic>.from(product) : null;
-  }
 
   static Future<List<Map<String, dynamic>>> searchAdditives(
       String query) async {

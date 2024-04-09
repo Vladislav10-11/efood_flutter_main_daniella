@@ -5,6 +5,7 @@ class ProductCard extends StatelessWidget {
 
   ProductCard({
     required this.product,
+    required ValueKey key,
   });
 
   List<Map<String, dynamic>> get ingredients {
