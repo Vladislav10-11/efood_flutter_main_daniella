@@ -1,5 +1,6 @@
 import 'package:efood_flutter/api/auth_api.dart';
 import 'package:efood_flutter/api/auth_provider.dart';
+import 'package:efood_flutter/components/product_card.dart';
 import 'package:efood_flutter/pages/additives_page.dart';
 import 'package:efood_flutter/pages/home_page.dart';
 import 'package:efood_flutter/pages/login_page.dart';
@@ -25,7 +26,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: ProductCard(
+        product: {},
+        key: ValueKey(""),
+      ),
     );
   }
 }

@@ -22,7 +22,6 @@ class ProductCard extends StatelessWidget {
   }
 
   bool isUserAllergicTo(String ingredient) {
-    // Implement your allergic check logic here
     return false;
   }
 
@@ -45,8 +44,8 @@ class ProductCard extends StatelessWidget {
           children: [
             Image.network(
               product['image'],
-              width: 200.0,
-              height: 200.0,
+              width: 150.0,
+              height: 150.0,
               fit: BoxFit.cover,
             ),
             SizedBox(width: 16.0),
@@ -63,7 +62,15 @@ class ProductCard extends StatelessWidget {
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    product['description'],
+                    product['code'],
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: Colors.black54,
+                    ),
+                  ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    product['barcode'],
                     style: TextStyle(
                       fontSize: 14.0,
                       color: Colors.black54,
