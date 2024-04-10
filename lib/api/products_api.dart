@@ -16,7 +16,7 @@ class ProductsAPI {
       "code": "E101",
     },
     {
-      'id': 1,
+      'id': 2,
       'user_id': 1,
       'name': 'Масло Бутербродне ферма 63%',
       'image': 'https://picsum.photos/200/300/?1',
@@ -27,7 +27,7 @@ class ProductsAPI {
       "code": "E230",
     },
     {
-      'id': 1,
+      'id': 3,
       'user_id': 1,
       'name':
           'name": "Крекер зі смаком цибулі та сметани The Crackers Yarych м/y 80g',
@@ -39,7 +39,7 @@ class ProductsAPI {
       "code": "E231",
     },
     {
-      'id': 1,
+      'id': 4,
       'user_id': 1,
       'name': 'Макаронні вироби PASTA PRIMA 800g',
       'image': 'https://picsum.photos/200/300/?1',
@@ -50,7 +50,7 @@ class ProductsAPI {
       "code": "E232",
     },
     {
-      'id': 1,
+      'id': 5,
       'user_id': 1,
       'name': 'Борошно пшеничне Зерновита м/y 2кg.',
       'image': 'https://picsum.photos/200/300/?1',
@@ -61,7 +61,7 @@ class ProductsAPI {
       "code": "E233",
     },
     {
-      'id': 1,
+      'id': 6,
       'user_id': 1,
       'name': 'Олія оливкова Arioli Extra Virgen 500мл',
       'image': 'https://picsum.photos/200/300/?1',
@@ -72,7 +72,7 @@ class ProductsAPI {
       "code": "E234",
     },
     {
-      'id': 1,
+      'id': 7,
       'user_id': 1,
       'name': 'Крупа гречана ядриця Зерновита м/y 1кg',
       'image': 'https://picsum.photos/200/300/?1',
@@ -83,7 +83,7 @@ class ProductsAPI {
       "code": "E235",
     },
     {
-      'id': 1,
+      'id': 8,
       'user_id': 1,
       'name': 'Паштет курячий з журавлиною Екстра Шпік лоток 130g',
       'image': 'https://picsum.photos/200/300/?1',
@@ -94,7 +94,7 @@ class ProductsAPI {
       "code": "E236",
     },
     {
-      'id': 1,
+      'id': 9,
       'user_id': 1,
       'name': 'Паштет курячий з журавлиною Екстра Шпік лоток 130g',
       'image': 'https://picsum.photos/200/300/?1',
@@ -105,7 +105,7 @@ class ProductsAPI {
       "code": "E237",
     },
     {
-      'id': 1,
+      'id': 10,
       'user_id': 1,
       'name': 'Маслини чорні без кісточки Lorado з/б 314мл',
       'image': 'https://picsum.photos/200/300/?1',
@@ -116,7 +116,7 @@ class ProductsAPI {
       "code": "E238",
     },
     {
-      'id': 1,
+      'id': 11,
       'user_id': 1,
       'name': 'Маслини чорні без кісточки Lorado з/б 314мл',
       'image': 'https://picsum.photos/200/300/?1',
@@ -127,7 +127,7 @@ class ProductsAPI {
       "code": "E239",
     },
     {
-      'id': 1,
+      'id': 12,
       'user_id': 1,
       'name':
           'Трубочки мультизлакові зі справжнім сиром Yellow Cheese Brunch м/y 120g',
@@ -139,7 +139,7 @@ class ProductsAPI {
       "code": "E240",
     },
     {
-      'id': 1,
+      'id': 13,
       'user_id': 1,
       'name': 'ЧІПСИ PRINGLES ПАПРИКА',
       'image': 'https://picsum.photos/200/300/?1',
@@ -150,7 +150,7 @@ class ProductsAPI {
       "code": "E243",
     },
     {
-      'id': 1,
+      'id': 14,
       'user_id': 1,
       'name': 'ПЕЧИВО Oreo 176g',
       'image': 'https://picsum.photos/200/300/?1',
@@ -161,7 +161,7 @@ class ProductsAPI {
       "code": "E244",
     },
     {
-      'id': 1,
+      'id': 15,
       'user_id': 1,
       'name': 'ЯЙЦЯ КУРЯЧІ 10ШT',
       'image': 'https://picsum.photos/200/300/?1',
@@ -172,7 +172,7 @@ class ProductsAPI {
       "code": "E245",
     },
     {
-      'id': 1,
+      'id': 16,
       'user_id': 1,
       'name': 'ПОПКОРН З СІЛЛЮ BOOMZA! M/Y 30Г',
       'image': 'https://picsum.photos/200/300/?1',
@@ -183,7 +183,7 @@ class ProductsAPI {
       "code": "E246",
     },
     {
-      'id': 1,
+      'id': 17,
       'user_id': 1,
       'name': 'МОРОЗИВО ДЕСЕРТ-МОРОЗИВО РУДЬ M/Y 400Г',
       'image': 'https://picsum.photos/200/300/?1',
